@@ -1,2 +1,2 @@
 # CAF
-The CAS (code assignment forum). Made for my other repositories.
+The CAF (code assignment forum). Made for my other repositories.
