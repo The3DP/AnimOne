@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The3DP Animation</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ball {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      animation: bounce 3s infinite ease-in-out, move 5s forwards;
+      z-index: 1;
+    }
+
+    .ball:nth-child(1) { background-color: #ff5733; animation-delay: 0s; }
+    .ball:nth-child(2) { background-color: #33ff57; animation-delay: 0.5s; }
+    .ball:nth-child(3) { background-color: #3357ff; animation-delay: 1s; }
+    .ball:nth-child(4) { background-color: #f1c40f; animation-delay: 1.5s; }
+    .ball:nth-child(5) { background-color: #9b59b6; animation-delay: 2s; }
+    .ball:nth-child(6) { background-color: #e74c3c; animation-delay: 2.5s; }
+    .ball:nth-child(7) { background-color: #2ecc71; animation-delay: 3s; }
+    .ball:nth-child(8) { background-color: #3498db; animation-delay: 3.5s; }
+    .ball:nth-child(9) { background-color: #f39c12; animation-delay: 4s; }
+    .ball:nth-child(10) { background-color: #8e44ad; animation-delay: 4.5s; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-100px); }
+    }
+
+    @keyframes move {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(200px, -100px); }
+      50% { transform: translate(400px, 0); }
+      75% { transform: translate(200px, 100px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    .merged-ball {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #2ecc71;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: merge 5s forwards;
+      z-index: 2;
+    }
+
+    .merged-ball span {
+      font-size: 3rem;
+      color: #fff;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeIn 5s forwards;
+    }
+
+    @keyframes merge {
+      0% { width: 50px; height: 50px; opacity: 0; transform: scale(1); }
+      100% { width: 300px; height: 300px; opacity: 1; background-color: #2c3e50; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="merged-ball">
+      <span>The3DP</span>
+    </div>
+  </div>
+
+  <script>
+    // Make all balls move towards the center
+    const balls = document.querySelectorAll('.ball');
+    const mergedBall = document.querySelector('.merged-ball');
+    const scene = document.querySelector('.scene');
+
+    setTimeout(() => {
+      balls.forEach((ball, index) => {
+        const centerX = window.innerWidth / 2 - ball.offsetWidth / 2;
+        const centerY = window.innerHeight / 2 - ball.offsetHeight / 2;
+
+        // Animate each ball to move towards the center
+        ball.style.transition = `transform 2s ease-in-out`;
+        ball.style.transform = `translate(${centerX - ball.offsetLeft}px, ${centerY - ball.offsetTop}px)`;
+      });
+
+      // Once the balls reach the center, make them merge into a big ball
+      setTimeout(() => {
+        mergedBall.style.opacity = 1;
+        mergedBall.style.transform = 'scale(1)';
+      }, 2000);
+    }, 1000);
+  </script>
+</body>
+</html>
+
