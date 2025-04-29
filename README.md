@@ -1,4 +1,4 @@
->Description coming soon. Please wait.
+\\This repository contains 5 animations you can test out and combine.
 ##
 Recommended Testing Sites (RTS) 
 Are sites that I test these codes on
