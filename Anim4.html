@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cross Surrounded by Blue Fire</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at center, #000, #111);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .scene {
+      position: relative;
+      width: 200px;
+      height: 300px;
+    }
+
+    .cross {
+      position: absolute;
+      width: 30px;
+      height: 150px;
+      background: linear-gradient(to bottom, #444, #222);
+      border-radius: 4px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 30px #00f, 0 0 50px #0ff;
+      z-index: 2;
+    }
+
+    .cross::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 30px;
+      background: linear-gradient(to right, #444, #222);
+      top: 60px;
+      left: -35px;
+      border-radius: 4px;
+      box-shadow: 0 0 20px #00f, 0 0 40px #0ff;
+    }
+
+    .flame {
+      position: absolute;
+      bottom: 0;
+      width: 8px;
+      height: 8px;
+      background: radial-gradient(circle, #0ff, #00f);
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: rise 1.5s infinite ease-in;
+    }
+
+    .flame:nth-child(1) { left: 30px; animation-delay: 0s; }
+    .flame:nth-child(2) { left: 60px; animation-delay: 0.2s; }
+    .flame:nth-child(3) { left: 90px; animation-delay: 0.4s; }
+    .flame:nth-child(4) { left: 120px; animation-delay: 0.1s; }
+    .flame:nth-child(5) { left: 150px; animation-delay: 0.3s; }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120px) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    .glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 20%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse 2s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.5;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="glow"></div>
+    <div class="cross"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+  </div>
+</body>
+</html>
 
