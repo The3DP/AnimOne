@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML-Only Fire Animation</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fire {
+      position: relative;
+      width: 100px;
+      height: 150px;
+    }
+
+    .flame {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border-radius: 50%;
+      animation: flicker 1s infinite ease-in-out;
+      transform-origin: bottom center;
+    }
+
+    .red {
+      background: red;
+      height: 60%;
+      box-shadow: 0 0 20px red;
+    }
+
+    .orange {
+      background: orange;
+      height: 50%;
+      box-shadow: 0 0 25px orange;
+      animation-delay: 0.1s;
+    }
+
+    .yellow {
+      background: yellow;
+      height: 40%;
+      box-shadow: 0 0 30px yellow;
+      animation-delay: 0.2s;
+    }
+
+    .white {
+      background: white;
+      height: 30%;
+      box-shadow: 0 0 35px white;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        transform: scaleY(1) rotate(0deg);
+      }
+      50% {
+        transform: scaleY(1.1) rotate(2deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="fire">
+    <div class="flame red"></div>
+    <div class="flame orange"></div>
+    <div class="flame yellow"></div>
+    <div class="flame white"></div>
+  </div>
+</body>
+</html>
 
