@@ -1,3 +1,6 @@
+<p align="center"> AnimOne
+
+##
 >This repository contains multiple animations you can test out and combine.
 ##
 Recommended Testing Sites (RTS) 
