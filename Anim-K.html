@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Floating Bubbles</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #001f3f; /* Dark blue background */
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<canvas id="bubblesCanvas"></canvas>
 
+<script>
+  const canvas = document.getElementById('bubblesCanvas');
+  const ctx = canvas.getContext('2d');
+  let width, height;
+
+  function resizeCanvas() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  class Bubble {
+    constructor() {
+      this.reset();
+    }
+
+    reset() {
+      this.x = Math.random() * width;
+      this.y = height + Math.random() * 100;
+      this.radius = 10 + Math.random() * 30;
+      this.speed = 0.5 + Math.random() * 1.5;
+      this drift = (Math.random() - 0.5) * 0.5;
+      this.alpha = 0.3 + Math.random() * 0.5;
+      this.color = `rgba(255, 255, 255, ${this.alpha})`;
+    }
+
+    update() {
+      this.y -= this.speed;
+      this.x += this.drift;
+      if (this.y + this.radius < 0) {
+        this.reset();
+      }
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+  }
+
+  const bubbles = [];
+  const maxBubbles = 100;
+
+  for (let i = 0; i < maxBubbles; i++) {
+    bubbles.push(new Bubble());
+  }
+
+  let startTime = null;
+  const duration = 10 * 60 * 1000; // 10 minutes in milliseconds
+
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+
+    ctx.clearRect(0, 0, width, height);
+
+    for (let bubble of bubbles) {
+      bubble.update();
+      bubble.draw();
+    }
+
+    if (elapsed < duration) {
+      requestAnimationFrame(animate);
+    } else {
+      console.log('🫧 Bubbles animation complete!');
+    }
+  }
+
+  requestAnimationFrame(animate);
+</script>
+</body>
+</html>
