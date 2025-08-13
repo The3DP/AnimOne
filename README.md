@@ -20,3 +20,5 @@ CC0 1.0 Universal" please contact me at my public email:
 d73928430@gmail.com
 
 - The3DP
+
+![60% Complete](https://img.shields.io/badge/Progress-60%25-brightgreen)
