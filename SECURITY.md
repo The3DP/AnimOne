@@ -9,7 +9,7 @@ you have the most secure code.
 | Version | Supported          |
 |---------|--------------------|
 | Current  | ✅                 |
-| <Any other version not current> | ❌ |
+|  Anything else | ❌ |
 
 ## Reporting a Vulnerability
 
