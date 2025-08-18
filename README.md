@@ -29,4 +29,4 @@ on this Repository's README.md.
 Next, paste the code in 
 the "practice" area.
 
-![progressing](https://img.shields.io/badge/Progress-Updating25-green)
+![progressing](https://img.shields.io/badge/Progress-Updating-green)
