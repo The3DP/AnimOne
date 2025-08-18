@@ -21,4 +21,12 @@ d73928430@gmail.com
 
 - The3DP
 
-![60% Complete](https://img.shields.io/badge/Progress-60%25-orange)
+# Example:
+Anim-K is a 10 minute long animation of floating bubbles.
+Copy the file "Anim-K.html", then click on 
+the RTS (Recommended Testing Site)
+on this Repository's README.md. 
+Next, paste the code in 
+the "practice" area.
+
+![80% Complete](https://img.shields.io/badge/Progress-80%25-darkgreen)
