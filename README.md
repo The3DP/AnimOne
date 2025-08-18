@@ -13,11 +13,15 @@ Click on this link to go to
 their "Try it yourself" page which
 you can test my code on.
 https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default
-##
-Thank you for understanding the rules and regulations in LICENSE.
-For questions on this repository related to the "Creative Commons Legal Code
-CC0 1.0 Universal" please contact me at my public email:
-d73928430@gmail.com
+
+# Future Updates 
+
+## Displaying Options
+Multiple displaying options will be provided under careful testing, ensuring no hidden errors.
+
+## More, More, More
+There is a LOT of new, exciting, and, more interactive animations than before.
+These will be compared to the animations existing to prove better build, solid code, and seamless operation!
 
 - The3DP
 
