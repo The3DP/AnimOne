@@ -29,4 +29,4 @@ on this Repository's README.md.
 Next, paste the code in 
 the "practice" area.
 
-![80% Complete](https://img.shields.io/badge/Progress-80%25-darkgreen)
+![100% Complete](https://img.shields.io/badge/Progress-100%25-darkgreen)
