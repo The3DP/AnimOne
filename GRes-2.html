@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shape Morphing Animation</title>
+  <style>
+    svg {
+      width: 300px;
+      height: 300px;
+      display: block;
+      margin: 40px auto;
+    }
 
+    path {
+      fill: #FF5722;
+      animation: morph 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes morph {
+      0% {
+        d: path("M50 50 H250 V250 H50 Z"); /* Square */
+      }
+      50% {
+        d: path("M150 0 C 230 0, 300 70, 300 150 C 300 230, 230 300, 150 300 C 70 300, 0 230, 0 150 C 0 70, 70 0, 150 0 Z"); /* Circle-ish */
+      }
+      100% {
+        d: path("M50 50 H250 V250 H50 Z"); /* Back to Square */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<svg viewBox="0 0 300 300">
+  <path d="M50 50 H250 V250 H50 Z" />
+</svg>
+
+</body>
+</html>
