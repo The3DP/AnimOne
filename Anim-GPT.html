@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shape Morphing Animation</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .shape {
+      width: 200px;
+      height: 200px;
+      background-color: #0ff;
+      animation: morph 12s infinite ease-in-out, neonColor 12s infinite linear;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* square */
+      transition: background-color 1s;
+    }
+
+    @keyframes morph {
+      0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* square */
+      }
+      25% {
+        clip-path: circle(50% at 50% 50%); /* circle */
+      }
+      50% {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* triangle */
+      }
+      75% {
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        ); /* star */
+      }
+      100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* back to square */
+      }
+    }
+
+    @keyframes neonColor {
+      0% {
+        background-color: #39ff14; /* neon green */
+      }
+      25% {
+        background-color: #ff073a; /* neon red */
+      }
+      50% {
+        background-color: #00f0ff; /* neon blue */
+      }
+      75% {
+        background-color: #f0f; /* neon pink */
+      }
+      100% {
+        background-color: #39ff14; /* back to green */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shape"></div>
+</body>
+</html>
