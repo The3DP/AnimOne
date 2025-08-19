@@ -1,7 +1,9 @@
 <p align="center"> AnimOne
 
-##
->This repository contains multiple animations you can test out and combine.
+# About
+AnimOne is a experimental repository which contains multiple animations you can test out and combine.
+Anyone can fully use AnimOne, regardless of coding or tech experience.
+You can
 ##
 Recommended Testing Sites (RTS) 
 Are sites that I test these codes on
@@ -23,9 +25,16 @@ Multiple displaying options will be provided under careful testing, ensuring no 
 There is a LOT of new, exciting, and, more interactive animations than before.
 These will be compared to the animations existing to prove better build, solid code, and seamless operation!
 
-- The3DP
+# How to run animations.
+Running the code from the "Anim" files is extremely quick and easy task. 
+Just follow the steps provided below.
 
-# Example:
+## 1. Copy the code.
+Simply click the "Copy raw file", found near the top right,
+
+<img width="1440" height="900" alt="Screenshot 2025-08-18 at 7 03 08 PM" src="https://github.com/user-attachments/assets/f5942e8a-ec0d-4ea8-97c7-3ffe97ae44cf" />
+
+# Description Example:
 Anim-K is a 10 minute long animation of floating bubbles.
 Copy the file "Anim-K.html", then click on 
 the RTS (Recommended Testing Site)
