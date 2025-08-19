@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shape Morphing</title>
+  <style>
+    svg {
+      width: 300px;
+      height: 300px;
+      display: block;
+      margin: 50px auto;
+    }
 
+    path {
+      fill: #0077ff;
+      transition: d 1s ease-in-out;
+    }
+
+    svg:hover path {
+      d: path("M150 0 L179 111 L293 111 L198 180 L227 293 L150 225 L73 293 L102 180 L7 111 L121 111 Z");
+    }
+  </style>
+</head>
+<body>
+
+<svg viewBox="0 0 300 300">
+  <path d="M150 0
+           C232.84 0 300 67.16 300 150
+           C300 232.84 232.84 300 150 300
+           C67.16 300 0 232.84 0 150
+           C0 67.16 67.16 0 150 0 Z"/>
+</svg>
+
+</body>
+</html>
