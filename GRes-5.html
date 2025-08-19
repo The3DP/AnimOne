@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shape Morphing Animation</title>
+  <style>
+    svg {
+      width: 300px;
+      height: 300px;
+      display: block;
+      margin: 50px auto;
+    }
 
+    path {
+      fill: #ff4081;
+      transition: d 1s ease-in-out;
+    }
+
+    svg:hover path {
+      d: path("M150 0
+                C180 0 200 20 200 50
+                C200 80 150 120 150 120
+                C150 120 100 80 100 50
+                C100 20 120 0 150 0 Z"); /* Heart */
+    }
+  </style>
+</head>
+<body>
+
+<svg viewBox="0 0 300 300">
+  <path d="M150,0
+           C180,0 200,20 200,50
+           C200,80 180,100 150,120
+           C120,100 100,80 100,50
+           C100,20 120,0 150,0 Z" />
+</svg>
+
+</body>
+</html>
