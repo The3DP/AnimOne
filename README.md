@@ -59,7 +59,7 @@ the "practice" area.
 
 # GRes Files
 The five "GRes" files are all ChatGPT generated.
-These were used to test ChatGPT's code improvment, 
+These files were all used to test ChatGPT's code improvment, 
 as well as enchancment skills. 
 ## How the test was performed:
 
