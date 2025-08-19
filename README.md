@@ -34,7 +34,19 @@ Simply click the "Copy raw file", found near the top right,
 
 <img width="1440" height="900" alt="Screenshot 2025-08-18 at 7 03 08 PM" src="https://github.com/user-attachments/assets/f5942e8a-ec0d-4ea8-97c7-3ffe97ae44cf" />
 
-# Description Example:
+## 2. Visit the RTS site
+Sroll up this README.md until you find the RTS section.
+When you click on the link, something like this should appear:
+
+<img width="1440" height="900" alt="Screenshot 2025-08-18 at 7 01 01 PM" src="https://github.com/user-attachments/assets/191eb2ee-2c3a-44f9-89ec-3f2ee1458683" />
+
+## 3. Run the code.
+Erase the reference html, then paste in the code you copied.
+After that, press the green run button, and the animation should appear.
+
+<img width="1440" height="900" alt="Screenshot 2025-08-18 at 7 04 11 PM" src="https://github.com/user-attachments/assets/03f9e804-33a0-4db9-a966-9f31e65675c7" />
+
+# Description text (example):
 Anim-K is a 10 minute long animation of floating bubbles.
 Copy the file "Anim-K.html", then click on 
 the RTS (Recommended Testing Site)
