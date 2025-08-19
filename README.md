@@ -42,7 +42,7 @@ When you click on the link, something like this should appear:
 
 ## 3. Run the code.
 Erase the reference html, then paste in the code you copied.
-After that, press the green "Run" button, and the animation should appear.
+After that, push the green "Run" button, and the animation should appear.
 NOTE: This animation can be found in "Anim-G.html".
 
 <img width="1440" height="900" alt="Screenshot 2025-08-18 at 7 04 11 PM" src="https://github.com/user-attachments/assets/03f9e804-33a0-4db9-a966-9f31e65675c7" />
