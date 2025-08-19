@@ -56,3 +56,15 @@ Next, paste the code in
 the "practice" area.
 
 ![progressing](https://img.shields.io/badge/Progress-Updating-green)
+
+# GRes Files
+The five "GRes" files are all ChatGPT generated.
+These were used to test ChatGPT's code improvment, 
+as well as enchancment skills. 
+## How the test was performed:
+
+- ChatGPT was asked the exact same thing five different times.
+
+- Every time was asked once the browser was refreshed.
+
+- ChatGPT stored no memory of the code it had written.
