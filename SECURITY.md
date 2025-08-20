@@ -22,6 +22,6 @@ If you discover a security vulnerability, please follow these steps:
    - Steps to reproduce it.
    - Impact assessment if possible.
 
-We will typically respond inside a 48 hour window.
+**We will typically respond inside a 48 hour window.**
 
-All security issues are taken seriously and responsible disclosure is appreciated.
+**All security issues are taken seriously and responsible disclosure is appreciated.*
